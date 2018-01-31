@@ -1,15 +1,37 @@
-# 4-2 scikit-learnä¸­çš„æœºå™¨å­¦ä¹ ç®—æ³•å°è£…
+# 4-2 scikit-learnÖÐµÄ»úÆ÷Ñ§Ï°Ëã·¨·â×°
 
-## å­¦ä¹ ç›®æ ‡
+## Ñ§Ï°Ä¿±ê
 
-## å­¦ä¹ ç¬”è®°
+## Ñ§Ï°±Ê¼Ç
 
-## é—®ç­”
 
-## å­¦ä¹ æ–¹æ³•
-å…ˆå¤ä¹ ä¸€ä¸‹å‰ä¸€è¯¾ï¼Œå¿˜äº†å·®ä¸å¤šäº†
-çœ‹ä¸æ˜Žç™½å°±å†çœ‹ä¸€éï¼Œä¸æ˜Žç™½å°±å†çœ‹ä¸€é
-ä»£ç æ•²ä¸€é
-ä»£ç å’Œè®²è§£åœ¨ç¬”è®°æœ¬é‡Œè¿žçº¿ä¸€ä¸‹
-ç”¨æäº¤commitæ¥è¡¨ç¤ºå­¦ä¹ è¿›åº¦ï¼Œæäº¤å­¦ä¹ è¿›åº¦
+## ÎÊ´ð
+ÎÊÌâ£º
+Ë½ÓÐ³ÉÔ±±äÁ¿ÃûÇ°Ó¦¸Ã¼ÓÁ½ÌõºáÏß£¿
+»Ø´ð£º
+ÑÏ¸ñÀ´ËµPythonÃ»ÓÐÕæÕýµÄË½ÓÐ³ÉÔ±±äÁ¿¡£__variableµÄÐÎÊ½Ò²¿ÉÒÔÍ¨¹ý_ClassName__variableµÄÐÎÊ½±»Íâ½çµ÷ÓÃ¡£__variable±È_variable¶à×öÁËname mangling¡£
 
+ºÜ¶àÎÄÕÂ¶¼»á³Æ_variableÎª¡°Ë½ÓÐ¡±¡£Õâ¸ö³Æºô²»¹»ÑÏ½÷¡£Python¹Ù·½³ÆÎªinternal use£¬²¢ÇÒÌØ±ðÇ¿µ÷£¬PythonÊÇÃ»ÓÐ¡°Ë½ÓÐ¡±¸ÅÄîµÄ¡£»òÕßËµ£¬_variableºÍ__variable¶¼¿ÉÒÔ½Ð¡°Ë½ÓÐ¡±¡£ÊÂÊµÉÏ£¬Python¹Ù·½¶ÔÕâ¶þÕßµÄÇø±ðÇ¿µ÷ÊÇname mangling£¬¶ø²»ÊÇ¡°Ë½ÓÐ¡±ºÍ¡°·ÇË½ÓÐ¡±¡£ÕâÒ»µã£¬¿ÉÒÔ²Î¼ûPython¹Ù·½PEP 8: https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles
+
+Ï°¹ßÉÏ£¬Èç¹ûÃ»ÓÐÌØÊâµÄÀíÓÉ£¬Ó¦¸ÃÊ¹ÓÃ_variable×÷ÎªÆäËûOOÓïÑÔÖÐµÄ¡°Ë½ÓÐ¡±µÄ¸ÅÄî£¬ÔÚPythonÓïÑÔÖÐ¸ü¶àµÄÊÇÒ»¸öÌáÊ¾£ºÕâÊÇÒ»¸ö²»Ó¦¸Ã±»Íâ½ç´¥ÅöµÄ±äÁ¿¡£ÎªÊ²Ã´Ã»ÓÐÌØÊâÇé¿ö²»Ó¦¸ÃÊ¹ÓÃ__variable£¿ÕâÊÇÒ»ÆªºÜºÃµÄÎÄÕÂËµÃ÷ÕâÒ»µã£ºhttp://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html#naming ÆäÖÐ»¹Ö¸ÏòÁËÁ½¸östackoverflowµÄÁ´½Ó£¬ÀïÃæ¶¼ÓÐºÜºÃµÄÌÖÂÛ¡£
+
+ÔÚÕâ¸ö¿Î³ÌÖÐ£¬ÎÒÃ»ÓÐÌØ±ð¾À½áÕâ¸ö³Æºô£¬±Ï¾¹²»ÊÇPython¿Î³Ì¡£°´ÕÕÏ°Ë×£¬ÎÒ³Æ_variableÎª¡°Ë½ÓÐ¡±¡£Ëæ±ãÕÒÒ»¸ö³Æ_variableÎªË½ÓÐµÄÀý×Ó£ºhttps://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc
+
+×îºó£¬Õâ¸ö¿Î³ÌÊµÏÖµÄËã·¨´úÂë·ç¸ñºÍscikit-learn±£³ÖÒ»ÖÂ£¬¿ÉÒÔ²Î¼ûscikit-learnµÄ´úÂë£¬ÆäÖÐ¶ÔÓÚ¡°Ë½ÓÐ¡±±äÁ¿£¨¼È²»ÐèÒª±»Íâ½çµ÷ÓÃµÄ±äÁ¿£©£¬Í³Ò»Ê¹ÓÃ_variable¡£Ëæ±ã¸øÒ»¸öÀý×Ó£ºhttps://github.com/scikit-learn/scikit-learn/blob/master/sklearn/neighbors/base.py ¿ÉÒÔËÑË÷¿´Ò»ÏÂÆäÖÐÖîÈç£º_fit_X£¬_treeµÈ¡°Ë½ÓÐ¡±±äÁ¿£»_fitµÈ¡°Ë½ÓÐ¡±·½·¨¡£¿ÉÒÔÔÙËÑË÷Ò»ÏÂ__£¬³ýÁËÄ§·¨·½·¨£¬²»»áÓÐ×Ô¶¨ÒåµÄ__variable»òÕß__method£º£©
+
+ÎÊÌâ£º
+¹ØÓÚ±¾½Ú¿Î³Ì¿ªÊ¼µÄµÚÈý¸öassert ÎÒÈÏÎªÓ¦¸ÃÊÇX_train.shape[1]==x.shape[1]
+»Ø´ð£º
+ÔÚÕâÒ»Ð¡½ÚÕâÀïµÄÐ¡x´«½øÈ¥µÄÊÇÒ»¸öÏòÁ¿Ò²¾ÍÊÇÖ»´ú±íÒ»¸öÑù±¾¡£Õâ¸öº¯ÊýÊÇÍ¨¹ýX_trainºÍy_trainµÄÐÅÏ¢ÅÐ¶ÏÒ»¸öÑù±¾xËùÊôµÄÀà±ð¡£Òò´ËxµÄshapeÖ»ÓÐÒ»¸öÔªËØËùÒÔÊÇx.shape[0]¡£
+
+²»¹ýÔÚÕâ¸ö¿Î³ÌµÄºóÃæÎÒÃÇ»á°´ÕÕsklearnµÄ½Ó¿Ú¶¨Òå¸Ä³É´«ÈëµÄÊÇÒ»¸ö´óX
+
+ÔÚÕâ¸ö¿Î³ÌÖÐ±àÂë¹æ·¶ÉÏÐ¡Ð´×ÖÄ¸±äÁ¿¾ù±íÊ¾Ò»Î¬ÏòÁ¿´óÐ´×ÖÄ¸±äÁ¿¾ù±íÊ¾¶þÎ¬¾ØÕó¡£ËùÒÔÎÒÃÇ½Ð´óX_trainÒòÎªÊÇÒ»¸ö¾ØÕóÐ¡y_trainÒòÎªyÊÇÒ»¸öÏòÁ¿
+## Ñ§Ï°·½·¨
+ÔÙ¿´Ò»±é
+´úÂëÇÃÒ»±é
+´úÂëºÍ½²½âÔÚ±Ê¼Ç±¾ÀïÁ¬ÏßÒ»ÏÂ
+ÓÃÌá½»commitÀ´±íÊ¾Ñ§Ï°½ø¶È£¬Ìá½»Ñ§Ï°½ø¶È
+ÓÐÁËÏë·¨¾ÍÁ¢¼´×ö£¬²»ÒªÕ´Õ´×ÔÏ²
+ÓÐÁËÎÊÌâ¾ÍÎÊ³öÀ´£¬ÎÊÒ²ÊÇÒ»ÖÖ»Ø´ð£¬ÒòÎªÒªÊáÀíÁË²ÅÄÜ°ÑÒªÎÊµÄËµÇå³þ£¬ËùÒÔÓÐÊ²Ã´²»Ã÷°×µÄ¾ÍÎÊ³öÀ´²»¹ÜÓÐÃ»ÓÐ´ð°¸
+°´Ê±Ë¯¾õ±ÈÁ¿¸üÖØÒª
