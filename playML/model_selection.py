@@ -13,9 +13,9 @@ def train_test_split(X, y, test_ratio=0.2, seed=None):
 
     # np.random.seed(seed)
     if seed: # 用于debug，希望得到的随机数一样
-        np.random.seed(seed)
+        np.random.seed(seed) # 种子
 
-    shuffle_indexes = np.random.permutation(len(X))
+    shuffled_indexes = np.random.permutation(len(X))
 
     test_size = int(len(X) * test_ratio) # 因为乘以小数不能保证得到整数
     # test_size
@@ -23,8 +23,11 @@ def train_test_split(X, y, test_ratio=0.2, seed=None):
     # print(shuffle_indexes.shape[0])
     # print(test_size)
     # print(train_size)
-    train_indexes = shuffle_indexes[:train_size]
-    test_indexes = shuffle_indexes[train_size:]
+    # train_indexes = shuffled_indexes[:train_size]
+    # test_indexes = shuffled_indexes[train_size:]
+
+    test_indexes = shuffled_indexes[:test_size]
+    train_indexes = shuffled_indexes[test_size:]
 
     # 怎么把shuffle_indexes套进去呢？
     X_train = X[train_indexes]
